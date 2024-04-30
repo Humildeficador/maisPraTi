@@ -149,7 +149,7 @@ custoMacas(quantidadeMacas); */
 
 /* Exercicio 8 - Organizar valores */
 
-function organizarValores(valor1, valor2) {
+/* function organizarValores(valor1, valor2) {
     if (valor1 === valor2) {
         console.log('Digite valores diferentes!');
         return
@@ -167,7 +167,7 @@ function organizarValores(valor1, valor2) {
 const valor1 = parseFloat(prompt('Digite o primeiro valor: '));
 const valor2 = parseFloat(prompt('Digite o segundo valor: '));
 
-organizarValores(valor1, valor2);
+organizarValores(valor1, valor2); */
 
 
 
@@ -263,3 +263,122 @@ parOuImpar(); */
 }
 
 sobraCinco() */
+
+
+
+/* Exercicio 13 - Tabuada */
+
+/* function tabuada(multiplicandos, multiplicadorMax) {
+
+    for (const multiplicando of multiplicandos) {
+        console.log('\n')
+        for (let i = 1; i <= multiplicadorMax; i++) {
+            console.log(`${multiplicando} x ${i} = ${multiplicando * i}`)
+        }
+    }
+}
+
+tabuada([1, 2, 3, 4, 5], 10) */
+
+
+
+/* Exercicio 13 c/ prompt - Tabuada */
+
+/* function tabuada() {
+    const multiplicandos = []
+    let multiplicadorMax = 0
+    for (let i = 1; i <= 6; i++) {
+        if (i <= 5) {
+            multiplicandos.push(Number(prompt(`Digite o ${i}º número: `)))
+        } else {
+            multiplicadorMax = Number(prompt('Digite o multiplicador máximo: '))
+        }
+    }
+
+    for (const multiplicando of multiplicandos) {
+        console.log(``)
+        for(let j = 1; j <= multiplicadorMax; j++) {
+            console.log(`${multiplicando} x ${j} = ${multiplicando * j}`)
+        }
+    }    
+}
+
+tabuada() */
+
+
+
+/* Exercicio 14 - Média aritmética */
+
+/* function media () {
+    const numeros = []
+    let numeroEntrada;
+
+    while(true) {
+        numeroEntrada = Number(prompt('Digite os números para calcular a média: '))
+
+        if(numeroEntrada !== 0) {
+            numeros.push(numeroEntrada)
+        } else {
+            break
+        }
+    }
+    console.log((numeros.reduce((a, b) => a + b, 0) / numeros.length).toFixed(2))
+}
+
+media() */
+
+
+
+/* Exercicio 15 - Média ponderada */
+
+/* function mediaPonderada() {
+    console.log(`Ao digitar 0 você encerrará o programa.`)
+    let produtos = 0;
+    let pesos = 0
+
+    while (true) {
+        const entradaNumero = Number(prompt(`Digite o número: `))
+        if(entradaNumero === 0)
+            break
+        
+        const entradaPeso = Number(prompt(`Digite o peso: `))
+        if(entradaPeso === 0)
+            break
+
+        const produto = entradaNumero * entradaPeso;
+        produtos += produto
+        pesos += entradaPeso
+    }
+    const media = produtos/pesos
+    console.log(`Média ponderada: ${media}`)
+}
+
+mediaPonderada() */
+
+
+
+/* Exercicio 16 - Números primmos > 100 */
+
+/* function numerosPrimos() {
+    let contagem = 1;
+    let numero = 101;
+
+    while (contagem <= 50) {
+        let primo = true
+        for (let i = 2; i < numero; i++) {
+            if(numero % i === 0) {
+                primo = false
+                break
+            }
+        }
+
+        if(primo) {
+            console.log(`${contagem}: ${numero}`)
+            contagem ++
+        } 
+        
+        numero ++
+    }
+}
+
+numerosPrimos() */
