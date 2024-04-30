@@ -1,9 +1,9 @@
 import PromptSync from "prompt-sync";
 const prompt = PromptSync();
 
-/* Exercicío 01 - converter graus em fahrenheit */
+console.log(`\nExercicío 01 - converter graus em fahrenheit`)
 
-/* function celsiusParaFahrenheit(grausCelcius) {
+function celsiusParaFahrenheit(grausCelcius) {
     const grausFahrenheit = (grausCelcius * 1.8) + 32;
     console.log(`${grausFahrenheit.toFixed(2)}°F`);
     return
@@ -11,13 +11,13 @@ const prompt = PromptSync();
 
 const temperaturaCelsius = parseFloat(prompt('Digite a temperatura (em celsius) que você deseja converter para fahrenheit:'));
 
-celsiusParaFahrenheit(temperaturaCelsius); */
+celsiusParaFahrenheit(temperaturaCelsius);
 
 
 
-/* Exericicio 02 - eleitores */
+console.log(`\nExericicio 02 - eleitores`)
 
-/* function porcentagemEleitores(eleitores, brancos, nulos, validos) {
+function porcentagemEleitores(eleitores, brancos, nulos, validos) {
     const porcentagem = parseInt(eleitores) / 100;
     const porcentagemBranco = parseInt(brancos) / porcentagem;
     const porcentagemNulos = parseInt(nulos) / porcentagem;
@@ -37,38 +37,38 @@ const brancos = prompt('Digite o total de votos brancos:');
 const nulos = prompt('Digite o total de votos nulos:');
 const validos = prompt('Digite o total de votos validos:');
 
-porcentagemEleitores(eleitores, brancos, nulos, validos); */
+porcentagemEleitores(eleitores, brancos, nulos, validos);
 
 
 
-/* Exercicio 3 - quatro inteiros */
+console.log(`\nExercicio 3 - quatro inteiros`)
 
-/* function quatroInteiros(numero1, numero2, numero3, numero4) {
-    const numero1Alterado = parseInt(numero1) + 25;
-    const numero2Alterado = parseInt(numero2) * 3;
-    const numero3Alterado = (parseInt(numero3) / 100) * 12;
-    const numero4Alterado = parseInt(numero1) + numero2 + numero3;
+function quatroInteiros(numero1, numero2, numero3, numero4) {
+    const numero1Alterado = numero1 + 25;
+    const numero2Alterado = numero2 * 3;
+    const numero3Alterado = numero3 * 0.12;
+    const numero4Alterado = numero1 + numero2 + numero3;
 
     console.log(`\nPrimeiro número: ${numero1Alterado}`);
     console.log(`Segundo número: ${numero2Alterado}`);
     console.log(`Terceiro número: ${numero3Alterado}`);
-    console.log(`Quaurto número: ${numero4Alterado}`);
+    console.log(`Quarto número: ${numero4Alterado}`);
 
     return
 }
 
-const numero1 = prompt('Digite o primeiro número:')
-const numero2 = prompt('Digite o segundo número:')
-const numero3 = prompt('Digite o terceiro número:')
-const numero4 = prompt('Digite o primeiro número:')
+const numero1 = parseInt(prompt('Digite o primeiro número:'))
+const numero2 = parseInt(prompt('Digite o segundo número:'))
+const numero3 = parseInt(prompt('Digite o terceiro número:'))
+const numero4 = parseInt(prompt('Digite o quarto número:'))
 
-quatroInteiros(numero1, numero2, numero3, numero4); */
+quatroInteiros(numero1, numero2, numero3, numero4);
 
 
 
-/* Exercicio 4 & 5 - média semestral */
+console.log(`\nExercicio 4 & 5 - média semestral`)
 
-/* function calculaMedia(nota1, nota2) {
+function calculaMedia(nota1, nota2) {
     const mediaSemestral = (parseFloat(nota1) + parseFloat(nota2)) / 2;
     const notaMinima = 6.0;
 
@@ -82,13 +82,13 @@ quatroInteiros(numero1, numero2, numero3, numero4); */
 const nota1 = prompt('Digite a nota da primeira avaliação:');
 const nota2 = prompt('Digite a nota da segunda avaliação:');
 
-calculaMedia(nota1, nota2); */
+calculaMedia(nota1, nota2);
 
 
 
-/* Exercicio 6 - triangulo */
+console.log(`\nExercicio 6 - triangulo`)
 
-/* function triangulo(ladoA, ladoB, ladoC) {
+function triangulo(ladoA, ladoB, ladoC) {
     const ladoA_Parse = parseFloat(ladoA);
     const ladoB_Parse = parseFloat(ladoB);
     const ladoC_Parse = parseFloat(ladoC);
@@ -122,13 +122,13 @@ const ladoA = prompt('Digite o primeiro lado do triângulo: ');
 const ladoB = prompt('Digite o segundo lado do triângulo: ');
 const ladoC = prompt('Digite o terceiro lado do triângulo: ');
 
-triangulo(ladoA, ladoB, ladoC); */
+triangulo(ladoA, ladoB, ladoC);
 
 
 
-/* Exercicio 7 - maçãs */
+console.log(`\nExercicio 7 - maçãs`)
 
-/* function custoMacas(quantidadeMacas) {
+function custoMacas(quantidadeMacas) {
     let custoTotal ;
     if(quantidadeMacas < 12) {
         custoTotal = 0.30 * quantidadeMacas;
@@ -143,13 +143,13 @@ triangulo(ladoA, ladoB, ladoC); */
 
 const quantidadeMacas = parseInt(prompt('Digite a quantidade da maçãs compradas: '))
 
-custoMacas(quantidadeMacas); */
+custoMacas(quantidadeMacas);
 
 
 
-/* Exercicio 8 - Organizar valores */
+console.log(`\nExercicio 8 - Organizar valores`)
 
-/* function organizarValores(valor1, valor2) {
+function organizarValores(valor1, valor2) {
     if (valor1 === valor2) {
         console.log('Digite valores diferentes!');
         return
@@ -167,13 +167,13 @@ custoMacas(quantidadeMacas); */
 const valor1 = parseFloat(prompt('Digite o primeiro valor: '));
 const valor2 = parseFloat(prompt('Digite o segundo valor: '));
 
-organizarValores(valor1, valor2); */
+organizarValores(valor1, valor2);
 
 
 
-/* Exercicio 9 - código de origem */
+console.log(`\nExercicio 9 - código de origem`)
 
-/* function codigoOrigem(codigo) {
+function codigoOrigem(codigo) {
     switch (codigo) {
         case 1: {
             console.log('\nSul.');
@@ -216,26 +216,26 @@ organizarValores(valor1, valor2); */
 
 const codigo = parseInt(prompt('Digite o código do produto: '));
 
-codigoOrigem(codigo); */
+codigoOrigem(codigo);
 
 
 
-/* Exercicio 10 - Escrever na tela 10 vezes */
+console.log(`\nExercicio 10 - Escrever na tela 10 vezes`)
 
-/* function escrever10Vezes(numero) {
+function escrever10Vezes(numero) {
     for (let i = 0; i < 10; i++) {
         console.log(`${numero}`);
     }
 }
 
 const numero = parseInt(prompt('Escreva um número para ser escrito na tela 10x:'));
-escrever10Vezes(numero); */
+escrever10Vezes(numero);
 
 
 
-/* Exercicio 11 - par ou impar*/
+console.log(`\nExercicio 11 - par ou impar`)
 
-/* function parOuImpar() {
+function parOuImpar() {
     let verificacao = 0;
 
     while (verificacao >= 0 && verificacao != null) {
@@ -249,20 +249,20 @@ escrever10Vezes(numero); */
     }
 }
 
-parOuImpar(); */
+parOuImpar();
 
 
 
-/* Exercicio 12 - 1000 - 1999 */
+console.log(`\nExercicio 12 - 1000 - 1999`)
 
-/* function sobraCinco() {
+function sobraCinco() {
     for (let i = 1000; i <= 1999; i++) {
         i % 11 === 5 ? console.log(i) : null
     }
     return
 }
 
-sobraCinco() */
+sobraCinco()
 
 
 
@@ -282,9 +282,9 @@ tabuada([1, 2, 3, 4, 5], 10) */
 
 
 
-/* Exercicio 13 c/ prompt - Tabuada */
+console.log(`\nExercicio 13 c/ prompt - Tabuada`)
 
-/* function tabuada() {
+function tabuada() {
     const multiplicandos = []
     let multiplicadorMax = 0
     for (let i = 1; i <= 6; i++) {
@@ -303,13 +303,13 @@ tabuada([1, 2, 3, 4, 5], 10) */
     }    
 }
 
-tabuada() */
+tabuada()
 
 
 
-/* Exercicio 14 - Média aritmética */
+console.log(`\nExercicio 14 - Média aritmética`)
 
-/* function media () {
+function media () {
     const numeros = []
     let numeroEntrada;
 
@@ -325,13 +325,13 @@ tabuada() */
     console.log((numeros.reduce((a, b) => a + b, 0) / numeros.length).toFixed(2))
 }
 
-media() */
+media()
 
 
 
-/* Exercicio 15 - Média ponderada */
+console.log(`\nExercicio 15 - Média ponderada`)
 
-/* function mediaPonderada() {
+function mediaPonderada() {
     console.log(`Ao digitar 0 você encerrará o programa.`)
     let produtos = 0;
     let pesos = 0
@@ -353,13 +353,13 @@ media() */
     console.log(`Média ponderada: ${media}`)
 }
 
-mediaPonderada() */
+mediaPonderada()
 
 
 
-/* Exercicio 16 - Números primmos > 100 */
+console.log(`\nExercicio 16 - Números primmos > 100`)
 
-/* function numerosPrimos() {
+function numerosPrimos() {
     let contagem = 1;
     let numero = 101;
 
@@ -381,4 +381,4 @@ mediaPonderada() */
     }
 }
 
-numerosPrimos() */
+numerosPrimos()
