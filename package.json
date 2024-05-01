@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "atividade": "node atividades/atividade01.js"
+  },
   "dependencies": {
     "prompt-sync": "^4.2.0"
   },
