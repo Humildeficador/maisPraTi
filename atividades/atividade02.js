@@ -221,13 +221,13 @@ function exercicio10() {
         valores.push(numero)
         const verificacao = Prompt(`Deseja continuar? Sim(s) | Não(n)`).toLocaleLowerCase()
 
-        if(verificacao === 'n'){
+        if (verificacao === 'n') {
             break;
         }
 
     } while (true)
 
-    const menorValor = valores.reduce((a, b) => b < a ? b : a , valores[0])
+    const menorValor = valores.reduce((a, b) => b < a ? b : a, valores[0])
     const valoresPares = valores.filter(v => v % 2 === 0 ? v : null)
     const totalValores = valores.reduce((prev, current) => prev + current, 0)
     const mediaValores = totalValores / valores.length
@@ -240,4 +240,23 @@ function exercicio10() {
     })
 }
 
-exercicio10();
+// exercicio10();
+
+
+function exercicio11() {
+    const valor = Number(Prompt(`Digite o primeiro valor da PA: `))
+    const razao = Number(Prompt(`Digite a razao da PA: `))
+    const pa = [valor]
+
+    for(let i = 0; i < 9; i++) {
+        pa.push(pa[pa.length-1] + razao)
+    }
+
+    const somaPa = pa.reduce((prev, current) => prev + current, 0)
+    console.log({
+        "10 primeiros elementos": pa,
+        "Somas entre valores": somaPa
+    })
+}
+
+exercicio11();
