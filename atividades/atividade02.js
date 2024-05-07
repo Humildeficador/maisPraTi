@@ -376,3 +376,21 @@ function exercicio19() {
 // exercicio19();
 
 
+function exercicio20() {
+    const pagamento = {
+        matricula: 0,
+        nome: '',
+        salarioBruto: 0,
+    }
+
+    pagamento.matricula = Number(Prompt(`Digite a matricula do funcionario: `))
+    pagamento.nome = Prompt(`Digite o nome do functionario: `)
+    pagamento.salarioBruto = Number(Prompt(`Digite o salario bruto do funcionario: `))
+
+    pagamento.INSS = pagamento.salarioBruto * 0.12
+    pagamento.salarioLiquido = pagamento.salarioBruto - pagamento.INSS
+
+    console.log(pagamento)
+}
+
+exercicio20();
