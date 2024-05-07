@@ -315,7 +315,30 @@ function exercicio16() {
         rng.push(Math.floor(Math.random() * 100))
     }
     console.log(rng)
-    console.log(rng.sort((a,b) => a - b))
+    console.log(rng.sort((a, b) => a - b))
 }
 
-exercicio16();
+// exercicio16();
+
+
+function exercicio17() {
+    const nomes = []
+    const idades = []
+
+    for (let i = 0; i < 9; i++) {
+        nomes.push(Prompt(`Digite o nome: `))
+        idades.push(Number(Prompt(`Digite a idade: `)))
+    }
+
+    const menores = []
+    idades.forEach((idade, i) => {
+        if (idade < 18) {
+            menores.push({ nome: nomes[i], idade })
+        }
+    })
+
+    console.log(menores)
+}
+
+// exercicio17();
+
