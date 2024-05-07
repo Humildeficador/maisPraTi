@@ -270,4 +270,15 @@ function exericicio12() {
     console.log(fibonacci)
 }
 
-exericicio12();
+// exericicio12();
+
+
+function exercicio13() {
+    const fibonacci = [1, 1]
+    for (let i = 0; i < 13; i++) {
+        fibonacci.push(fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2])
+    }
+    console.log(fibonacci)
+}
+
+exercicio13();
