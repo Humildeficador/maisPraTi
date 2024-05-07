@@ -296,5 +296,26 @@ function exericio14() {
 
 
 function exercicio15() {
-    
+    const vetor = []
+
+    for (let i = 0; i < 10; i++) {
+        vetor.push(Math.round(Number(Prompt(`Digite um número: `))))
+    }
+
+    vetor.forEach((v, i) => v % 2 === 0 ? console.log(`Número ${v}, index: ${i}`) : null)
 }
+
+// exercicio15();
+
+
+function exercicio16() {
+    const rng = []
+
+    for (let i = 0; i < 20; i++) {
+        rng.push(Math.floor(Math.random() * 100))
+    }
+    console.log(rng)
+    console.log(rng.sort((a,b) => a - b))
+}
+
+exercicio16();
