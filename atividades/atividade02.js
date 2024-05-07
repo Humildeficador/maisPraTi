@@ -281,4 +281,20 @@ function exercicio13() {
     console.log(fibonacci)
 }
 
-exercicio13();
+// exercicio13();
+
+
+function exericio14() {
+    const nomes = []
+    for (let i = 0; i < 7; i++) {
+        nomes.push(Prompt(`Digite um nome: `))
+    }
+    console.log(nomes.reverse())
+}
+
+// exericio14();
+
+
+function exercicio15() {
+    
+}
