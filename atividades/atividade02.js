@@ -248,8 +248,8 @@ function exercicio11() {
     const razao = Number(Prompt(`Digite a razao da PA: `))
     const pa = [valor]
 
-    for(let i = 0; i < 9; i++) {
-        pa.push(pa[pa.length-1] + razao)
+    for (let i = 0; i < 9; i++) {
+        pa.push(pa[pa.length - 1] + razao)
     }
 
     const somaPa = pa.reduce((prev, current) => prev + current, 0)
@@ -259,4 +259,15 @@ function exercicio11() {
     })
 }
 
-exercicio11();
+// exercicio11();
+
+
+function exericicio12() {
+    const fibonacci = [1, 1]
+    for (let i = 0; i < 8; i++) {
+        fibonacci.push(fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2])
+    }
+    console.log(fibonacci)
+}
+
+exericicio12();
