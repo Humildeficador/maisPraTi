@@ -356,4 +356,23 @@ function exercicio18() {
     console.log(funcionario)
 }
 
-exercicio18();
+// exercicio18();
+
+
+function exercicio19() {
+    const horarios = []
+
+    for (let i = 0; i < 5; i++) {
+        const hora = Number(Prompt(`Digite a hora: `))
+        const minutos = Number(Prompt(`Digite os minutos: `))
+        const segundos = Number(Prompt(`Digite os segundos: `))
+
+        horarios.push(`${hora}:${minutos}:${segundos}`)
+    }
+
+    console.log(horarios)
+}
+
+// exercicio19();
+
+
