@@ -342,3 +342,18 @@ function exercicio17() {
 
 // exercicio17();
 
+
+function exercicio18() {
+    const funcionario = {
+        nome: '',
+        cargo: '',
+        salario: ''
+    }
+    funcionario.nome = Prompt(`Digite o nome do funcionario: `)
+    funcionario.cargo = Prompt(`Digite o cargo do funcionario: `)
+    funcionario.salario = format(Number(Prompt(`Digite o salario do funcionario: `)))
+
+    console.log(funcionario)
+}
+
+exercicio18();
