@@ -407,3 +407,37 @@ function exercicio21() {
 }
 
 // exercicio21('m', 1.75)
+
+
+function exercicio22() {
+    let salarios = [];
+    let numeroFilhos = [];
+
+    while (true) {
+        const salarioAtual = Number(prompt('Qual é o seu salário?'))
+        if (salarioAtual < 0) {
+            break
+        }
+        const filhosAtual = Number(prompt('Quantos filhos você tem?'))
+        if (filhosAtual < 0) {
+            break
+        }
+        salarios.push(salarioAtual)
+        numeroFilhos.push(filhosAtual)
+    }
+
+    const mediaSalario = salarios.reduce((a, b) => a + b, 0) / salarios.length;
+    console.log(`Média salarios: ${mediaSalario}`)
+
+    const mediaFilhos = numeroFilhos.reduce((a, b) => a + b, 0) / numeroFilhos.length;
+    console.log(`Média filhos: ${mediaFilhos}`)
+
+    const maiorSalario = salarios.reduce((a, b) => b > a ? b : a, 0);
+    console.log(`Maior salario: ${maiorSalario}`)
+
+    const pessoas350 = ((salarios.filter(salario => salario <= 350).length - 1) / (salarios.length - 1)) * 100
+
+    console.log(`Percentual de pessoas com salario até R$350: ${pessoas350}%`)
+}
+
+exercicio22()
