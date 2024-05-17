@@ -393,4 +393,17 @@ function exercicio20() {
     console.log(pagamento)
 }
 
-exercicio20();
+// exercicio20();
+
+
+function exercicio21() {
+    const sexo = Prompt('Digite seu sexo: [m | f]')
+    const alt = Number(Prompt('Digite sua altura: [ex: 1.75]'))
+    if (sexo === 'm') {
+        console.log(((72.7 * alt) - 58).toFixed(2))
+    } else if (sexo === 'f') {
+        console.log(((62.1 * alt) - 44.7).toFixed(2))
+    }
+}
+
+// exercicio21('m', 1.75)
