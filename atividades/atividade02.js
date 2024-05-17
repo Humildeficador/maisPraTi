@@ -414,11 +414,11 @@ function exercicio22() {
     let numeroFilhos = [];
 
     while (true) {
-        const salarioAtual = Number(prompt('Qual é o seu salário?'))
+        const salarioAtual = Number(Prompt('Qual é o seu salário?'))
         if (salarioAtual < 0) {
             break
         }
-        const filhosAtual = Number(prompt('Quantos filhos você tem?'))
+        const filhosAtual = Number(Prompt('Quantos filhos você tem?'))
         if (filhosAtual < 0) {
             break
         }
