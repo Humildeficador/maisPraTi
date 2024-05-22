@@ -542,4 +542,24 @@ function exercicio26() {
 	console.table(matrizP)
 }
 
-exercicio26()
+// exercicio26()
+
+
+function exercicio27() {
+	const matriz = []
+	const multiplicador = 5
+	const vetor = []
+
+	for (let i = 0; i < 6; i++) {
+		matriz[i] = []
+		for (let j = 0; j < 6; j++) {
+			matriz[i][j] = getRandomNumber(10)
+			vetor.push(matriz[i][j] * multiplicador)
+		}
+	}
+
+	console.table(matriz)
+	console.log(vetor)
+}
+
+exercicio27()
