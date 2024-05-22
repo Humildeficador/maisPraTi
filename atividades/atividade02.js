@@ -1,6 +1,7 @@
 import PromptSync from "prompt-sync";
 import { format } from "./utils/formatPrice.js";
 import { plusOrMinus } from "./utils/plusOrMinus.js";
+import { getRandomNumber } from "./utils/getRandomNumber.js";
 const Prompt = PromptSync();
 
 function exercicio01() {
@@ -489,3 +490,56 @@ function exercicio24() {
 }
 
 // exercicio24()
+
+
+function exercicio25() {
+	const matriz = []
+
+	for (let i = 0; i < 15; i++) {
+		matriz[i] = []
+		for (let j = 0; j < 20; j++) {
+			matriz[i][j] = getRandomNumber(50)
+		}
+	}
+
+	const somaColuna = Array(20).fill(0);
+
+	for (let i = 0; i < 15; i++) {
+		for (let j = 0; j < 20; j++) {
+			somaColuna[j] += matriz[i][j]
+		}
+	}
+
+	console.table(matriz)
+	console.table(somaColuna)
+}
+
+// exercicio25()
+
+
+function exercicio26() {
+	const matrizA = []
+	const matrizB = []
+	const matrizP = []
+
+	for (let i = 0; i < 3; i++) {
+		matrizA[i] = []
+		matrizB[i] = []
+		matrizP[i] = []
+
+		for (let j = 0; j < 5; j++) {
+			matrizA[i][j] = getRandomNumber(10)
+			matrizB[i][j] = getRandomNumber(10)
+			matrizP[i][j] = matrizA[i][j] * matrizB[i][j]
+		}
+	}
+
+	console.log('Matriz A')
+	console.table(matrizA)
+	console.log('Matriz B')
+	console.table(matrizB)
+	console.log('Matriz P')
+	console.table(matrizP)
+}
+
+exercicio26()
