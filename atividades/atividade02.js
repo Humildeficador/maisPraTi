@@ -2,6 +2,7 @@ import PromptSync from "prompt-sync";
 import { format } from "./utils/formatPrice.js";
 import { plusOrMinus } from "./utils/plusOrMinus.js";
 import { getRandomNumber } from "./utils/getRandomNumber.js";
+import { getRandomMatriz } from "./utils/getRandomMatriz.js";
 const Prompt = PromptSync();
 
 function exercicio01() {
@@ -562,4 +563,64 @@ function exercicio27() {
 	console.log(vetor)
 }
 
-exercicio27()
+// exercicio27()
+
+
+function exercicio28() {
+	const matriz = []
+	let somaA = 0
+	let somaB = 0
+
+	for (let i = 0; i < 10; i++) {
+		matriz[i] = []
+		for (let j = 0; j < 10; j++) {
+			matriz[i][j] = getRandomNumber(10)
+
+			if (j > i) {
+				somaA += matriz[i][j]
+			}
+			if (i > j) {
+				somaB += matriz[i][j]
+			}
+		}
+	}
+
+	console.table(matriz)
+	// console.log(somaA)
+	// console.log(somaB)
+}
+
+// exercicio28()
+
+
+function exercicio29() {
+	const matriz = getRandomMatriz({ x: 5, y: 5, maxRandomNumber: 10 })
+	let somaLinha4 = 0
+	let somaColuna2 = 0
+	let somaDiagonal = 0
+	let somaTotal = 0
+
+	console.table(matriz.value)
+	for (let i = 0; i < matriz.y; i++) {
+		if (i === 3) {
+			somaLinha4 = matriz.value[i].reduce((a, b) => a + b, 0)
+		}
+		for (let j = 0; j < matriz.x; j++) {
+			if (j === 1) {
+				somaColuna2 += matriz.value[i][j]
+			}
+			if (i === j) {
+				somaDiagonal += matriz.value[i][j]
+			}
+			somaTotal += matriz.value[i][j]
+		}
+	}
+	console.log({
+		somaLinha4,
+		somaColuna2,
+		somaDiagonal,
+		somaTotal
+	})
+}
+
+exercicio29();
