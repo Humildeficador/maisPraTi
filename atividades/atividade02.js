@@ -623,4 +623,53 @@ function exercicio29() {
 	})
 }
 
-exercicio29();
+// exercicio29()
+
+
+function exericicio30() {
+	const matriz = getRandomMatriz({ x: 5, y: 5, maxRandomNumber: 10 })
+
+	let vetorSL = []
+	let vetorSC = Array(5).fill(0)
+
+	for (let i = 0; i < matriz.y; i++) {
+		vetorSL[i] = matriz.value[i].reduce((a, b) => a + b, 0)
+		for (let j = 0; j < matriz.x; j++) {
+			vetorSC[j] += matriz.value[i][j]
+		}
+	}
+	console.log({
+		matriz: matriz.value,
+		vetorSL,
+		vetorSC
+	})
+}
+
+// exericicio30()
+
+
+function exercicio31() {
+	const matriz = getRandomMatriz({ x: 5, y: 5, maxRandomNumber: 10 })
+	const valorA = getRandomNumber(10)
+	let contador = 0
+	const matrizX = []
+
+	for (let i = 0; i < matriz.y; i++) {
+		for (let j = 0; j < matriz.x; j++) {
+			if (matriz.value[i][j] === valorA) {
+				contador++
+			} else {
+				matrizX.push(matriz.value[i][j])
+			}
+		}
+	}
+
+	console.log({
+		matriz: matriz.value,
+		valorA,
+		contador,
+		matrizX
+	})
+}
+
+// exercicio31()
