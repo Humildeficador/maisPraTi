@@ -494,24 +494,16 @@ function exercicio24() {
 
 
 function exercicio25() {
-	const matriz = []
-
-	for (let i = 0; i < 15; i++) {
-		matriz[i] = []
-		for (let j = 0; j < 20; j++) {
-			matriz[i][j] = getRandomNumber(50)
-		}
-	}
-
+	const matriz = getRandomMatriz({ x: 15, y: 20, maxRandomNumber: 50 })
 	const somaColuna = Array(20).fill(0);
 
-	for (let i = 0; i < 15; i++) {
-		for (let j = 0; j < 20; j++) {
-			somaColuna[j] += matriz[i][j]
+	for (let i = 0; i < matriz.x; i++) {
+		for (let j = 0; j < matriz.y; j++) {
+			somaColuna[j] += matriz.value[i][j]
 		}
 	}
 
-	console.table(matriz)
+	console.table(matriz.value)
 	console.table(somaColuna)
 }
 
@@ -519,26 +511,20 @@ function exercicio25() {
 
 
 function exercicio26() {
-	const matrizA = []
-	const matrizB = []
+	const matrizA = getRandomMatriz({ x: 3, y: 5, maxRandomNumber: 10 })
+	const matrizB = getRandomMatriz({ x: 3, y: 5, maxRandomNumber: 10 })
 	const matrizP = []
 
-	for (let i = 0; i < 3; i++) {
-		matrizA[i] = []
-		matrizB[i] = []
-		matrizP[i] = []
-
-		for (let j = 0; j < 5; j++) {
-			matrizA[i][j] = getRandomNumber(10)
-			matrizB[i][j] = getRandomNumber(10)
-			matrizP[i][j] = matrizA[i][j] * matrizB[i][j]
-		}
+	for (let i = 0; i < matrizA.x; i++) {
+		matrizP[i] = matrizA.value[i].map((v, j) => {
+			return v * matrizB.value[i][j]
+		})
 	}
 
 	console.log('Matriz A')
-	console.table(matrizA)
+	console.table(matrizA.value)
 	console.log('Matriz B')
-	console.table(matrizB)
+	console.table(matrizB.value)
 	console.log('Matriz P')
 	console.table(matrizP)
 }
@@ -547,19 +533,17 @@ function exercicio26() {
 
 
 function exercicio27() {
-	const matriz = []
+	const matriz = getRandomMatriz({ x: 6, y: 6, maxRandomNumber: 10 })
 	const multiplicador = 5
 	const vetor = []
 
-	for (let i = 0; i < 6; i++) {
-		matriz[i] = []
-		for (let j = 0; j < 6; j++) {
-			matriz[i][j] = getRandomNumber(10)
-			vetor.push(matriz[i][j] * multiplicador)
+	for (let i = 0; i < matriz.x; i++) {
+		for (let j = 0; j < matriz.y; j++) {
+			vetor.push(matriz.value[i][j] * multiplicador)
 		}
 	}
 
-	console.table(matriz)
+	console.table(matriz.value)
 	console.log(vetor)
 }
 
@@ -567,27 +551,24 @@ function exercicio27() {
 
 
 function exercicio28() {
-	const matriz = []
+	const matriz = getRandomMatriz({ x: 10, y: 10, maxRandomNumber: 10 })
 	let somaA = 0
 	let somaB = 0
 
-	for (let i = 0; i < 10; i++) {
-		matriz[i] = []
-		for (let j = 0; j < 10; j++) {
-			matriz[i][j] = getRandomNumber(10)
-
+	for (let i = 0; i < matriz.x; i++) {
+		for (let j = 0; j < matriz.y; j++) {
 			if (j > i) {
-				somaA += matriz[i][j]
+				somaA += matriz.value[i][j]
 			}
 			if (i > j) {
-				somaB += matriz[i][j]
+				somaB += matriz.value[i][j]
 			}
 		}
 	}
 
-	console.table(matriz)
-	// console.log(somaA)
-	// console.log(somaB)
+	console.table(matriz.value)
+	console.log(somaA)
+	console.log(somaB)
 }
 
 // exercicio28()
@@ -678,11 +659,11 @@ function exercicio31() {
 function exercicio32() {
 	const matriz = getRandomMatriz({ x: 12, y: 13, maxRandomNumber: 100 })
 	const matrizA = []
-	
+
 	for (let i = 0; i < matriz.x; i++) {
-		
+
 		const divisor = matriz.value[i].reduce((a, b) => b > a ? b : a, 0)
-		
+
 		matrizA[i] = matriz.value[i].map((value) => {
 			return Number((value / divisor).toFixed(2))
 		})
@@ -691,4 +672,4 @@ function exercicio32() {
 	console.table(matrizA)
 }
 
-exercicio32()
+// exercicio32()
