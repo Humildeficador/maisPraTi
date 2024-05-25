@@ -632,9 +632,9 @@ function exericicio30() {
 	let vetorSL = []
 	let vetorSC = Array(5).fill(0)
 
-	for (let i = 0; i < matriz.y; i++) {
+	for (let i = 0; i < matriz.x; i++) {
 		vetorSL[i] = matriz.value[i].reduce((a, b) => a + b, 0)
-		for (let j = 0; j < matriz.x; j++) {
+		for (let j = 0; j < matriz.y; j++) {
 			vetorSC[j] += matriz.value[i][j]
 		}
 	}
@@ -654,8 +654,8 @@ function exercicio31() {
 	let contador = 0
 	const matrizX = []
 
-	for (let i = 0; i < matriz.y; i++) {
-		for (let j = 0; j < matriz.x; j++) {
+	for (let i = 0; i < matriz.x; i++) {
+		for (let j = 0; j < matriz.y; j++) {
 			if (matriz.value[i][j] === valorA) {
 				contador++
 			} else {
@@ -673,3 +673,22 @@ function exercicio31() {
 }
 
 // exercicio31()
+
+
+function exercicio32() {
+	const matriz = getRandomMatriz({ x: 12, y: 13, maxRandomNumber: 100 })
+	const matrizA = []
+	
+	for (let i = 0; i < matriz.x; i++) {
+		
+		const divisor = matriz.value[i].reduce((a, b) => b > a ? b : a, 0)
+		
+		matrizA[i] = matriz.value[i].map((value) => {
+			return Number((value / divisor).toFixed(2))
+		})
+	}
+	console.table(matriz.value)
+	console.table(matrizA)
+}
+
+exercicio32()
