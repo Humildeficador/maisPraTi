@@ -679,16 +679,16 @@ function exercicio33() {
 	const matriz = getRandomMatriz({ x: 3, y: 3, maxRandomNumber: 10 })
 	let mediaDiagonalSecundaria = 0
 	for (let i = 0; i < matriz.x; i++) {
-		mediaDiagonalSecundaria += matriz.value[i][matriz.value[i].length -1 -i]
+		mediaDiagonalSecundaria += matriz.value[i][matriz.value[i].length - 1 - i]
 	}
-	
+
 	console.table(matriz.value)
 	console.log(`Média diagonal secundaria: ${mediaDiagonalSecundaria}`)
 
 	for (let i = 0; i < matriz.x; i++) {
 		matriz.value[i][i] *= mediaDiagonalSecundaria
 	}
-	
+
 	console.table(matriz.value)
 }
 
@@ -696,11 +696,11 @@ function exercicio33() {
 
 
 function exercicio34() {
-	const matriz = getRandomMatriz({x: 50, y: 50, maxRandomNumber: 10})
+	const matriz = getRandomMatriz({ x: 50, y: 50, maxRandomNumber: 10 })
 
 	console.table(matriz.value)
-	
-	for(let i = 0; i < matriz.x; i++) {
+
+	for (let i = 0; i < matriz.x; i++) {
 		const multiplicador = matriz.value[i][i]
 		matriz.value[i] = matriz.value[i].map(v => {
 			return v * multiplicador
@@ -710,4 +710,32 @@ function exercicio34() {
 	console.table(matriz.value)
 }
 
-exercicio34()
+// exercicio34()
+
+
+function exercicio35() {
+	let par = []
+	let impar = []
+
+	for (let i = 0; i < 30; i++) {
+		const valor = Number(Prompt('Digite um valor: '))
+
+		if (valor % 2 === 0) {
+			par.push(valor)
+		} else {
+			impar.push(valor)
+		}
+
+		if (par.length === 5) {
+			console.log(`Pares: ${par}`)
+			par = []
+		} else if (impar.length === 5) {
+			console.log(`Impares: ${impar}`)
+			impar = []
+		}
+	}
+	console.log(`Pares: ${par}`)
+	console.log(`Impares: ${impar}`)
+}
+
+// exercicio35()
