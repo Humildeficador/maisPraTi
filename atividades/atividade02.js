@@ -673,3 +673,23 @@ function exercicio32() {
 }
 
 // exercicio32()
+
+
+function exercicio33() {
+	const matriz = getRandomMatriz({ x: 3, y: 3, maxRandomNumber: 10 })
+	let mediaDiagonalSecundaria = 0
+	for (let i = 0; i < matriz.x; i++) {
+		mediaDiagonalSecundaria += matriz.value[i][matriz.value[i].length -1 -i]
+	}
+	
+	console.table(matriz.value)
+	console.log(`Média diagonal secundaria: ${mediaDiagonalSecundaria}`)
+
+	for (let i = 0; i < matriz.x; i++) {
+		matriz.value[i][i] *= mediaDiagonalSecundaria
+	}
+	
+	console.table(matriz.value)
+}
+
+exercicio33()
