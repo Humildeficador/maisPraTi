@@ -692,4 +692,22 @@ function exercicio33() {
 	console.table(matriz.value)
 }
 
-exercicio33()
+// exercicio33()
+
+
+function exercicio34() {
+	const matriz = getRandomMatriz({x: 50, y: 50, maxRandomNumber: 10})
+
+	console.table(matriz.value)
+	
+	for(let i = 0; i < matriz.x; i++) {
+		const multiplicador = matriz.value[i][i]
+		matriz.value[i] = matriz.value[i].map(v => {
+			return v * multiplicador
+		})
+	}
+
+	console.table(matriz.value)
+}
+
+exercicio34()
