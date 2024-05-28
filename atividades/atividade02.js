@@ -739,3 +739,64 @@ function exercicio35() {
 }
 
 // exercicio35()
+
+
+function exercicio36(gabarito = [], respostas = [[]]) {
+	let contador = 0
+	gabarito.sort((a, b) => a - b)
+	for (let i = 0; i < respostas.length; i++) {
+		respostas[i].sort((a, b) => a - b)
+		console.log(`Cartão: ${(i + 1).toString().padStart(3, '0')}`)
+		console.log(`Suas respostas: ${respostas[i].toString().replace(/,/g, '-')}`)
+
+		const ganhador = gabarito.map((valor, index) => {
+			return valor === respostas[i][index]
+		})
+
+		if (ganhador.every(v => v === true)) {
+			console.log(`Quantidade de acertos: 13`)
+			console.log('Parabens, tu é o GANHADOR!\n')
+		} else {
+			ganhador.forEach(v => {
+				v === true && contador++
+			})
+			console.log(`Quantidade de acertos: ${contador}`)
+			contador = 0
+		}
+	}
+}
+
+/* exercicio36(
+	[1, 2, 3, 4, 5, 62, 7, 8, 9, 10, 11, 12, 13],
+	[
+		[1, 2, 3, 4, 62, 5, 7, 8, 9, 10, 11, 12, 13],
+		[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14],
+		[1, 22, 32, 4, 5, 6, 7, 8, 9, 10, 11, 16, 18]
+	]
+) */
+
+
+function exercicio37() {
+	const gabarito = (Prompt('Digite o gabarito de 20 respostas separado por virgula. (Exemplo: )')).toLowerCase()
+	const gabaritoArray = gabarito.replace(/\s+/g, '').split(/,/)
+
+	if (gabaritoArray.length !== 20) {
+		console.log(`Tamanho de gabarito invalido: ${gabaritoArray.length}\nTamanho esperado: 20`)
+		return
+	}
+
+	for (let i = 0; i < 50; i++) {
+		const resposta = (Prompt('Digite as 20 respostas do aluno separado por virgula. (Exemplo: a, a, c, b, e, e)')).toLowerCase()
+
+		const respostaArray = resposta.replace(/\s+/g, '').split(/,/)
+
+		let j = 0
+		gabaritoArray.forEach((v, i) => {
+			v === respostaArray[i] && j++
+		})
+
+		console.log(j >= 12 ? 'APROVADO' : 'REPROVADO')
+	}
+}
+
+exercicio37()
