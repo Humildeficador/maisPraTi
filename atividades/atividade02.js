@@ -891,4 +891,20 @@ function exercicio40(gabarito = []) {
 	}
 }
 
-exercicio40([1, 2, 3, 4, 5])
+// exercicio40([1, 2, 3, 4, 5])
+
+
+function exercicio41() {
+	const pessoa = {
+		nome: 'João',
+		idade: 24
+	}
+
+	console.log(`Idade: ${pessoa.idade}`)
+
+	pessoa.email = Prompt('Digite seu email: ')
+
+	console.log(pessoa)
+}
+
+// exercicio41()
