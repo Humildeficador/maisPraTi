@@ -846,4 +846,25 @@ function exercicio38() {
 	}
 }
 
-exercicio38()
+// exercicio38()
+
+
+function exercicio39() {
+	const vetorA = []
+	const vetorB = []
+
+	for (let i = 0; i < 100; i++) {
+		vetorA.push(Number(Prompt('Digite um número: ')))
+	}
+
+	for (let i = 0; i < vetorA.length; i++) {
+		if (!/-\d+/.test(vetorA[i])) {
+			vetorB.push(vetorA[i])
+		}
+	}
+
+	console.log(`Vetor A\n${vetorA}\n`)
+	console.log(`Vetor B\n${vetorB}`)
+}
+
+exercicio39()
