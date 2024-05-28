@@ -867,4 +867,28 @@ function exercicio39() {
 	console.log(`Vetor B\n${vetorB}`)
 }
 
-exercicio39()
+// exercicio39()
+
+
+function exercicio40(gabarito = []) {
+	gabarito.sort((a, b) => a - b)
+	const respostas = []
+
+	for (let i = 0; i < 2; i++) {
+		respostas[i] = []
+		for (let j = 0; j < 5; j++) {
+			respostas[i].push(Number(Prompt(`Digite o ${j + 1}º número: `)))
+		}
+
+		respostas[i].sort((a, b) => a - b)
+		const ganhador = gabarito.every((valor, index) => {
+			return valor === respostas[i][index]
+		})
+		if (ganhador) {
+			console.log('Ganhador!')
+		}
+		console.log(`\n`)
+	}
+}
+
+exercicio40([1, 2, 3, 4, 5])
