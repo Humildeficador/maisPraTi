@@ -799,4 +799,51 @@ function exercicio37() {
 	}
 }
 
-exercicio37()
+// exercicio37()
+
+
+function exercicio38() {
+	const vetor = []
+
+	for (let i = 0; i < 6; i++) {
+		vetor.push(Number(Prompt('Digite um número: ')))
+	}
+
+	console.log(`
+	1- soma dos elementos;
+	2- produto dos elementos;
+	3- média dos elementos;
+	4- ordene os elementos em ordem crescente;
+	5- mostre o vetor.
+`)
+
+	const identificador = Number(Prompt())
+	switch (identificador) {
+		case 1: {
+			console.log(vetor.reduce((a, b) => a + b, 0))
+			break;
+		}
+		case 2: {
+			console.log(vetor.reduce((a, b) => a * b, 1))
+			break;
+		}
+		case 3: {
+			console.log(vetor.reduce((a, b) => a + b, 0) / vetor.length)
+			break;
+		}
+		case 4: {
+			console.log(vetor.sort((a, b) => a - b))
+			break;
+		}
+		case 5: {
+			console.log(`Vetor: ${vetor}`)
+			break;
+		}
+		default: {
+			console.log('Comando invalido')
+			break;
+		}
+	}
+}
+
+exercicio38()
