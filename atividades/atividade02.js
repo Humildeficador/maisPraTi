@@ -966,3 +966,21 @@ function exercicio44() {
 
 // exercicio44()
 
+function exercicio45() {
+	const array = ['joao', 'ana', 'ana', 'pedro']
+	const objArray = {}
+
+	for (const key of array) {
+		if (objArray[key]) {
+			objArray[key]++
+		} else {
+			objArray[key] = 1
+		}
+	}
+
+	console.log(objArray)
+}
+
+// exercicio45()
+
+
