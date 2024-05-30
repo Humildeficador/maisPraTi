@@ -947,3 +947,22 @@ function exercicio43() {
 // exercicio43()
 
 
+function exercicio44() {
+	const pessoa = {
+		nome: 'Ana',
+		idade: 20,
+		sexo: 'feminino',
+		profissao: 'Desenvolvedor'
+	}
+
+	let i = 0
+	for (const key in pessoa) {
+		if (typeof pessoa[key] === 'string') {
+			i++
+		}
+	}
+	console.log(`Existem ${i} propriedades do tipo string.`)
+}
+
+// exercicio44()
+
