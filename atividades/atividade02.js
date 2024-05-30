@@ -1023,4 +1023,31 @@ function exercicio46() {
 	console.log(vendaPorVendedor)
 }
 
-exercicio46()
+// exercicio46()
+
+
+function exercicio47() {
+	const pessoa = {
+		nome: 'Ana',
+		idade: 20,
+		sexo: 'feminino',
+		profissao: 'Desenvolvedor'
+	}
+
+	function changeObj(obj, callback) {
+		const newObj = {}
+		for (const key in obj) {
+			newObj[key] = callback(obj[key])
+		}
+
+		return newObj
+	}
+
+	const somaMaisUm = (item) => {
+		return item += 1
+	}
+
+	console.log(changeObj(pessoa, somaMaisUm))
+}
+
+exercicio47()
