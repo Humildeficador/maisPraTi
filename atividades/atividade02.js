@@ -908,3 +908,42 @@ function exercicio41() {
 }
 
 // exercicio41()
+
+
+function exericio42() {
+	const pessoa = {
+		nome: 'João',
+		idade: 24,
+		comidasPreferidas: ['Frango Frito', 'Brocolis']
+	}
+
+	for (const key in pessoa) {
+		if (Array.isArray(pessoa[key])) {
+			console.log({ [key]: pessoa[key] })
+		}
+	}
+}
+
+// exericio42()
+
+
+function exercicio43() {
+	const obj1 = {
+		nome: 'João',
+		idade: 24,
+		altura: 175,
+		peso: 60
+	}
+
+	const obj2 = {
+		peso: 59.5,
+		profissao: 'Programador'
+	}
+
+	const obj3 = { ...obj1, ...obj2 }
+	console.log(obj3)
+}
+
+// exercicio43()
+
+
