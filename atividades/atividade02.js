@@ -984,3 +984,43 @@ function exercicio45() {
 // exercicio45()
 
 
+function exercicio46() {
+	const vendas = [
+		{
+			vendedor: 'Joao',
+			valor: 2500
+		},
+		{
+			vendedor: 'Ana',
+			valor: 5200
+		},
+		{
+			vendedor: 'Ana',
+			valor: 2220
+		},
+		{
+			vendedor: 'Felipe',
+			valor: 100
+		},
+		{
+			vendedor: 'Vitor',
+			valor: 2
+		}
+	]
+
+	const vendaPorVendedor = {}
+
+	vendas.forEach((venda) => {
+		const { vendedor, valor } = venda
+
+		if (vendaPorVendedor[vendedor]) {
+			vendaPorVendedor[vendedor] += valor
+		} else {
+			vendaPorVendedor[vendedor] = valor
+		}
+	})
+
+	console.log(vendaPorVendedor)
+}
+
+exercicio46()
