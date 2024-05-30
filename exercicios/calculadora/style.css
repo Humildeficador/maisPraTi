@@ -1,0 +1,57 @@
+:root {
+  --zinc-100: #f4f4f5;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--zinc-900);
+  color: var(--zinc-100);
+}
+
+table {
+  width: 250px;
+  height: calc(300px + 1rem);
+  border-collapse: collapse;
+}
+
+.tdTela {
+  height: 4rem;
+}
+
+.tela {
+  text-align: right;
+  height: 4rem;
+  width: 100%;
+  padding-right: .5rem;
+  background: var(--zinc-900);
+  color: var(--zinc-100);
+  font-size: 1.5rem;
+  outline: none;
+}
+
+button {
+  color: var(--zinc-100);
+  border-radius: 5px;
+  outline: none;
+  min-width: 50px;
+  height: 100%;
+  width: 100%;
+  background: var(--zinc-800);
+  transition: .1s;
+}
+
+button:hover {
+  background: var(--zinc-700);
+}
+
+.zero {
+  width: 100%;
+}
